@@ -7,7 +7,7 @@ while True:
   path.replace("/", r"\\")
   try:
     img = Image.open(path)
-    img.save(path[path.rfind(r"\\")+1:path.rfind(".")-1] + ".ico", format="ICO", sizes=[(64, 64)])
+    img.save(path[path.rfind(r"\\")+1:path.rfind(".")] + ".ico", format="ICO", sizes=[(64, 64)])
   except (FileNotFoundError, AttributeError) as err:
     print(err)
 
